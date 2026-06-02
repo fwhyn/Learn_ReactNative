@@ -1,17 +1,15 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-export default function Index() {
-  return (
-    <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+function HomeScreen() {
+    const insets = useSafeAreaInsets();
+    return (
+        <View style={{ flex: 1, paddingTop: insets.top }}>
+            <Text style={{ fontSize: 14 }}>Content is in safe area.</Text>
+        </View>
+    );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+export default function Index() {
+    return <HomeScreen />;
+}
