@@ -1,13 +1,22 @@
-import { Text, View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useAssets } from 'expo-asset';
+import { Image, Text } from 'react-native';
 
 function HomeScreen() {
-    const insets = useSafeAreaInsets();
-    return (
-        <View style={{ flex: 1, paddingTop: insets.top }}>
-            <Text style={{ fontSize: 14 }}>Content is in safe area.</Text>
-        </View>
-    );
+    const [assets, error] = useAssets([
+        require('@/assets/images/react-logo.png'),
+        require('@/assets/images/icon.png'),
+    ]);
+
+    if (error) {
+        return <Text>Unable to load assets.</Text>;
+    }
+
+    return assets ? (
+        <Image
+            source={{ uri: assets[1].uri }}
+            style={{ width: 100, height: 100 }}
+        />
+    ) : null;
 }
 
 export default function Index() {
