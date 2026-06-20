@@ -1,6 +1,4 @@
-type CatProps = {
+export type CatProps = {
     firstName: string;
     lastName: string;
 };
-
-export default CatProps;
