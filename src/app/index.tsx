@@ -1,24 +1,13 @@
-import { useAssets } from 'expo-asset';
-import { Image, Text } from 'react-native';
+import { Text, View } from 'react-native';
+import Cat from '../components/Cat';
 
-function HomeScreen() {
-    const [assets, error] = useAssets([
-        require('@/assets/images/react-logo.png'),
-        require('@/assets/images/icon.png'),
-    ]);
+const Cafe = () => {
+    return (
+        <View>
+            <Text>Hello!!!</Text>
+            <Cat firstName="John" lastName="Lenon" />
+        </View>
+    );
+};
 
-    if (error) {
-        return <Text>Unable to load assets.</Text>;
-    }
-
-    return assets ? (
-        <Image
-            source={{ uri: assets[1].uri }}
-            style={{ width: 100, height: 100 }}
-        />
-    ) : null;
-}
-
-export default function Index() {
-    return <HomeScreen />;
-}
+export default Cafe;
