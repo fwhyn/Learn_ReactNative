@@ -17,8 +17,8 @@ const Cafe = () => {
                 }}
             />
             <Text>Hello!</Text>
-            
-            <Text>Add space here</Text>
+
+            <View style={{ height: 20 }} />
             <Cat firstName="Ari" lastName="Kirk" isHungry={isHungry} />
             <Cat firstName="John" lastName="Lenon" />
 
