@@ -1,6 +1,5 @@
-type CatProps = {
+export type CatProps = {
     firstName: string;
     lastName: string;
+    isHungry?: boolean;
 };
-
-export default CatProps;

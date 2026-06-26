@@ -1,13 +1,3 @@
-import { Text, View } from 'react-native';
-import Cat from '../components/Cat';
+import PizzaTranslator from '@/components/PizzaTranslator';
 
-const Cafe = () => {
-    return (
-        <View>
-            <Text>Hello!!!</Text>
-            <Cat firstName="John" lastName="Lenon" />
-        </View>
-    );
-};
-
-export default Cafe;
+export default PizzaTranslator;
