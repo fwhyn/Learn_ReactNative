@@ -1,3 +1,3 @@
-import PizzaTranslator from '@/components/PizzaTranslator';
+import ScrollableView from '@/components/ScrollableView';
 
-export default PizzaTranslator;
+export default ScrollableView;
