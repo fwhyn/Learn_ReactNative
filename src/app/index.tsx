@@ -1,3 +1,3 @@
-import ScrollableView from '@/components/ScrollableView';
+import FlatListBasics from '@/components/FlatListBasics';
 
-export default ScrollableView;
+export default FlatListBasics;
